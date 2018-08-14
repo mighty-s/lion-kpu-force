@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Force</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body data-controller = "<%=controller.controller_name %>"
+        data-action = "<%=controller.action_name %>"
+        id="<%=controller.controller_name %>_<%=controller.action_name %>">
+
+    <%= yield %>
+  </body>
+</html>
