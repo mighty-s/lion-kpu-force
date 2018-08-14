@@ -37,10 +37,18 @@
     }
     .submit_input{
       margin-top:10px;
+      width:175px;
     }
     input::placeholder{
       font-family: 'Sawarabi Mincho', sans-serif;
       font-size: small;
+      color:#DADADA;
+      font-style:normal;
+    }
+
+    a{
+      font-size:small;
+      color:#999999;
     }
   }
 
