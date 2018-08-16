@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   get 'user/viewmenu'
 
   get 'user/order'
+  get 'home/register'
 
   get 'user/order_history'
 
