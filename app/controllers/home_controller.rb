@@ -4,4 +4,7 @@ class HomeController < ApplicationController
 
   def register
   end
+
+  def register_second
+  end
 end

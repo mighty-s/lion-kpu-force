@@ -2,55 +2,77 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+#home_login {
+  .login_wrap {
+    margin: 40px auto 0;
+    width: 1000px;
+    height: 800px;
 
-  .login_wrap
-  {
-    margin:40px auto 0;
-    width:1000px;
-    height:800px;
-
-
-    .login_logo{
-      width:185px;
-      height:120px;
-      display:block;
+    .login_logo {
+      width: 185px;
+      height: 120px;
+      display: block;
       margin: auto auto;
-      position:relative;
-      background : url(22222.jpg) no-repeat;
+      position: relative;
+      background: url(22222.jpg) no-repeat;
     }
-
-    .login_display {
-      margin: 30px auto 0;
-      height: 200px;
-      text-align: center;
-      font-family: 'Sawarabi Mincho', sans-serif;
-    }
-
 
     .login_display {
       margin: 20px auto 0;
       height: 200px;
       text-align: center;
-      font-family: 'Sawarabi Mincho', sans-serif;
 
-      input{
-        margin-bottom:10px;
+      input {
+        margin-bottom: 10px;
       }
-      .submit_input{
-        margin-top:10px;
-        width:175px;
+      .submit_login {
+        margin-top: 10px;
+        width: 175px;
       }
-      input::placeholder{
+      input::placeholder {
         font-family: 'Sawarabi Mincho', sans-serif;
         font-size: small;
-        color:#DADADA;
-        font-style:normal;
+        color: #DADADA;
+        font-style: normal;
       }
-      a{
-        font-size:small;
-        color:#999999;
+      a {
+        font-size: small;
+        color: #999999;
       }
     }
   }
+}
 
+#home_register {
+  .register_wrap {
+    margin: 40px auto 0;
+    width: 1000px;
+    height: 800px;
+
+    .register_logo {
+      width: 185px;
+      height: 120px;
+      display: block;
+      margin: auto auto;
+      position: relative;
+      background: url(22222.jpg) no-repeat;
+    }
+    .register_display{
+      margin: 20px auto 0;
+      width:250px;
+      height: 230px;
+      text-align: center;
+      font-size:small;
+      background-color:#EFEFEF;
+      table{
+        td{
+          margin-right:10px;
+        }
+        tr{
+          margin-bottom:20px;
+        }
+      } //table안에 margin들이 적용이 안됐음
+    }
+  }
+}
 
