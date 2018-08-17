@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'operators/create_menu'
+
   get 'user/viewmenu'
 
   get 'user/order'
