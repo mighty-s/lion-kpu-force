@@ -1,6 +1,9 @@
 @charset "utf-8";
 
 /* 폰트 선언 */
+@import url(https://fonts.googleapis.com/css?family=Dancing+Script|Do+Hyeon|Sawarabi+Mincho);/*테이블 번호*/
+@import url(https://fonts.googleapis.com/css?family=Do+Hyeon|Sawarabi+Mincho); /*상단바*/
+@import url(https://fonts.googleapis.com/css?family=Sawarabi+Mincho);
 @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
 @import url(http://fonts.googleapis.com/earlyaccess/nanummyeongjo.css);
 @import url(http://fonts.googleapis.com/earlyaccess/nanumbrushscript.css);
