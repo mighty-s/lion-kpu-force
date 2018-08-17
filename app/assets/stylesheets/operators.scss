@@ -11,6 +11,14 @@
   margin: 0 auto;
   width: 1000px;
   height: 800px;
+  p{
+    float:right;
+    margin-top:10px;
+    a{
+      color : #000000;
+      font-weight: bold;
+    }
+  }
 
   .operator_logo {
     width: 185px;
@@ -35,25 +43,21 @@
 
   .operator_bar_list
   {
-    li
+    a
     {
       display : inline;
       margin-right:35px;
       margin-left:35px;
       font-family: 'Do Hyeon', sans-serif;
-      li:hover
-      {
-        border-bottom:3px solid #cfcfcf; //아랫줄만 적용됨 solid외에 dotted 등등
-      }
-      a
-      {
-        color : #000000;
-      }
+      color : #000000;
+      font-size:medium;
+
+
     }
   }
-
-
-
 }
 
+#operators_create_menu{
+
+}
 

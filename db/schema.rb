@@ -13,8 +13,6 @@
 ActiveRecord::Schema.define(version: 20180813084858) do
 
   create_table "branches", force: :cascade do |t|
-    t.string "branch_id"
-    t.string "pw"
     t.string "name"
     t.integer "user_id"
     t.datetime "created_at", null: false
@@ -32,18 +30,19 @@ ActiveRecord::Schema.define(version: 20180813084858) do
   end
 
   create_table "orders", force: :cascade do |t|
-    t.integer "seat_used_id"
+    t.integer "seat_on_use_id"
     t.integer "menu_id"
     t.integer "amount"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["menu_id"], name: "index_orders_on_menu_id"
-    t.index ["seat_used_id"], name: "index_orders_on_seat_used_id"
+    t.index ["seat_on_use_id"], name: "index_orders_on_seat_on_use_id"
   end
 
   create_table "seat_onuses", force: :cascade do |t|
     t.string "hash_code"
     t.integer "structure_id"
+    t.string "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["structure_id"], name: "index_seat_onuses_on_structure_id"
