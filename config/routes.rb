@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   get 'user/order'
   get 'home/register'
+  get 'home/register_second'
 
   get 'user/order_history'
 
