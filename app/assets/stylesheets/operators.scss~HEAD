@@ -1,13 +1,16 @@
+// Place all the styles related to the operators controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
 // Place all the styles related to the user controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-.user_wrap {
+.operator_wrap {
   margin: 0 auto;
   width: 1000px;
   height: 800px;
-
   p{
     float:right;
     margin-top:10px;
@@ -17,7 +20,7 @@
     }
   }
 
-  .user_logo {
+  .operator_logo {
     width: 185px;
     height: 120px;
     display: block;
@@ -26,19 +29,19 @@
     background: url(22222.jpg) no-repeat;
   }
 
-  .user_bar_nav
+  .operator_bar_nav
   {
     width:100%;
     text-align :center;
 
-    .user_bar_list
+    .operator_bar_list
     {
       height:40px;
       line-height:40px
     }
   }
 
-  .user_bar_list
+  .operator_bar_list
   {
     a
     {
@@ -52,9 +55,9 @@
 
     }
   }
-
-
-
 }
 
+#operators_create_menu{
+
+}
 
