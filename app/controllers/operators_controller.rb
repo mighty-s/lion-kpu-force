@@ -1,22 +1,27 @@
 class OperatorsController < ApplicationController
 
   def index
+    @operator = Operator.all
+  end
+
+  def create
 
   end
 
-  def create_menu
+  def new
 
   end
 
-  def create_table
+
+  def show
 
   end
 
-  def video
+  def destroy
 
   end
 
-  def log_out
+  def edit
 
   end
 

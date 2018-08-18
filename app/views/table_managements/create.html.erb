@@ -1,0 +1,13 @@
+<% @tableStructure.each do |x| %>
+  <div>
+    <p><%=x.id%></p>
+    <p><%=x.name%></p>
+
+    <form action="<%=table_onuses_path%>" method="post">
+      <input type="hidden" name = "authenticity_token" value="<%=@token%>">
+      <input type="hidden" name = "struct_id" value = "<%=x.id%>">
+      <input type="submit" value="생성">
+    </form>
+
+  </div>
+<% end %>

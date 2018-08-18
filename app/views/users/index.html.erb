@@ -1,0 +1,8 @@
+<h1>어서 오세요~ </h1>
+<% @menu.each do |x| %>  <!-- 반복문! -->
+  제목 : <%= x.post_title %> <br>
+  내용 : <%= x.post_content %> <br>
+  <a href="/bbs/delete/<%= x.id%>">삭제</a>
+  <hr>
+<%end%>
+<a href ="/bbs/new">새 글 쓰기</a>

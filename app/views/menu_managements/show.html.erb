@@ -1,0 +1,19 @@
+<h1>메뉴.</h1>
+<% @menu_struct.each do |x| %>  <!-- 반복문! -->
+  제목 : <%= x.name %> <br>
+  내용 : <%= x.price %> <br>
+  <a href= <%  menu_managements_path method: "delete"%> <%= x.id%>">삭제</a>
+  <hr>
+<%end%>
+
+<h1>메뉴 만들기</h1>
+
+
+<form action="<%= menu_managements_path %>" method="post">
+<%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+이름 : <input type="text" name="menu_name" placeholder="이름"> <br>
+가격 : <input type="text" name="menu_price" placeholder="가격"> <br>
+<input type="submit" value="만들기">
+</form>
+
+<a href="/"> 홈으로 가기</a>

@@ -3,10 +3,24 @@
 <br>
 <br>
 <div>
-<%=link_to "메뉴 만들기", new_menu_managements_path %>
+<%=link_to "메뉴", new_menu_managements_path %> <!--operator/new로 빠지는것.-->
 <br><br>
 
-<%=link_to "테이블 만들기", new_table_managements_path %>
+  <% @operator.each do |x| %>
+    <div>
+      <p><%= x.id %></p>
+      <p><%= x.name %></p>
+
+      <form action="<%= table_managements_path %>" method="post">
+        <input type="hidden" name="authenticity_token" value="<%= @token %>">
+        <input type="hidden" name="struct_id" value="<%= x.id %>">
+        <input type="submit" value="테이블만들기">
+      </form>
+
+    </div>
+  <% end %>
 </div>
+<br>
+<a href="https://www.youtube.com/watch?v=iDaI88vlbbE">사용법</a>
 
 <br><br>
