@@ -1,0 +1,15 @@
+<div class="login_wrap">
+  <form action="/sessions/login_confirm" method="post">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <header class="logo"></header>
+  <section class="login_display">
+    <input class="key_input" type="text" placeholder="key">
+    <p>
+      <input class="pw_input" type="password" placeholder="password" >
+    <p>
+      <input class="submit_input" type="submit"  value="로그인">
+    <p>
+      <%= link_to '회원가입', new_home_path %>
+  </section> <!-- login_display end -->
+  </form>
+</div> <!-- login_wrap end -->
