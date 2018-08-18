@@ -19,5 +19,4 @@ class OperatorsController < ApplicationController
   def log_out
 
   end
-
 end

@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
-  get 'user/viewmenu'
 
-<<<<<<< HEAD
-  #
+  # ------------------  routes 홍준이형 ----------------
+  get 'operators/create_menu'
+
+  get 'user/viewmenu'
+ 
   # get 'homes/menu_managements'
   #
   # get 'homes/operators'
@@ -22,25 +24,24 @@ Rails.application.routes.draw do
   resource :menu_managements
   resource :homes
 
-=======
-  get 'user/order'
-  get 'home/register'
-  get 'home/register_second'
+  # ------------------  routes 소현이 ----------------
 
-  get 'user/order_history'
+  get 'usesr/order'
+  get 'homes/register'
+  get 'homes/register_second'
 
-  get 'user/logout_user'
+  get 'users/order_history'
 
-  get 'user/menual_user'
+  get 'users/logout_user'
 
-  root 'home#login'
-  get 'home/login'
+  get 'users/menual_user'
+  get 'operators/creat_menu'
 
-<<<<<<< HEAD
-=======
-  get 'test/index'
->>>>>>> dffeb31dcfc912f3e13ef788092c0ade1a71f1ab
+  # root 'homes#login'  프론트 소현이 루트 path
 
->>>>>>> fdcc6c18bb4eebb4b0371b244b1c730a22bd19f1
+  get 'homes/login'
+
+  get 'tests/index'
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
