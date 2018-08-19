@@ -2,12 +2,12 @@ class OperatorsController < ApplicationController
   def create
     @op=Operator.create(
                   user_id: params[:operator_id],
-                  pw: params[:operator_pw],
+                  password: params[:password],
                   phone: params[:operator_phone],
                   name: params[:operator_name]
     )
 
-    redirect_to '/homes/second_new'
+    redirect_to '/homes#index'
   end
 
   def second_create
@@ -17,5 +17,9 @@ class OperatorsController < ApplicationController
     )
 
     redirect_to '/homes#index', notice: "회원가입 완료!!"
+  end
+
+  def index
+
   end
 end

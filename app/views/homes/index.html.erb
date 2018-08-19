@@ -1,11 +1,11 @@
 <div class="login_wrap">
-  <form action="/sessions/login_confirm" method="post">
+  <form action="<%= sessions_path %>" method="post">
   <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
   <header class="logo"></header>
   <section class="login_display">
-    <input class="key_input" type="text" placeholder="key">
+    <input class="key_input" type="text" placeholder="key" name="op_id">
     <p>
-      <input class="pw_input" type="password" placeholder="password" >
+      <input class="pw_input" type="password" placeholder="password" name="password">
     <p>
       <input class="submit_input" type="submit"  value="로그인">
     <p>

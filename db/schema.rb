@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 20180818082518) do
 
   create_table "operators", force: :cascade do |t|
     t.string "user_id"
-    t.string "pw"
+    t.string "password_digest"
     t.string "phone"
     t.string "status"
     t.string "name"
