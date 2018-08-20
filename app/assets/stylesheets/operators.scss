@@ -1,3 +1,4 @@
+
 // Place all the styles related to the operators controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
@@ -11,11 +12,11 @@
   margin: 0 auto;
   width: 1000px;
   height: 800px;
-  p{
-    float:right;
-    margin-top:10px;
-    a{
-      color : #000000;
+  p {
+    float: right;
+    margin-top: 10px;
+    a {
+      color: #000000;
       font-weight: bold;
     }
   }
@@ -29,35 +30,49 @@
     background: url(22222.jpg) no-repeat;
   }
 
-  .operator_bar_nav
-  {
-    width:100%;
-    text-align :center;
+  .operator_bar_nav {
+    width: 100%;
+    text-align: center;
 
-    .operator_bar_list
-    {
-      height:40px;
-      line-height:40px
+    .operator_bar_list {
+      height: 40px;
+      line-height: 40px
     }
   }
 
-  .operator_bar_list
-  {
-    a
-    {
-      display : inline;
-      margin-right:35px;
-      margin-left:35px;
+  .operator_bar_list {
+    a {
+      display: inline;
+      margin-right: 35px;
+      margin-left: 35px;
       font-family: 'Do Hyeon', sans-serif;
-      color : #000000;
-      font-size:medium;
-
+      color: #000000;
+      font-size: medium;
 
     }
   }
+
+  .create_menu_section {
+    margin-top:30px;
+    width: 1000px;
+    height: 700px;
+    //background-color:pink;
+
+
+    .plus_icon {
+      width: 100px;
+      height: 100px;
+      display:block;
+    }
+    .add_menu{
+      width:auto;
+      height:auto;
+      input{
+        display:block;
+      }
+    }
+
+  }
 }
 
-#operators_create_menu{
-
-}
 
