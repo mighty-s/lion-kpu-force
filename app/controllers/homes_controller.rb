@@ -1,10 +1,10 @@
 class HomesController < ApplicationController
-  def login
+
+  def index
+
   end
 
-  def register
-  end
+  def show
 
-  def register_second
   end
 end

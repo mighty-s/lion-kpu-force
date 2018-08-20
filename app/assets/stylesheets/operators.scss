@@ -1,4 +1,9 @@
 
+
+
+
+
+
 // Place all the styles related to the operators controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
@@ -50,26 +55,70 @@
   }
 
   .create_menu_section {
-    margin-top:30px;
+    margin-top: 30px;
     width: 1000px;
     height: 700px;
-    //background-color:pink;
+    text-align: center;
 
-
-    .plus_icon {
+    .add_menu_click {
       width: 100px;
-      height: 100px;
-      display:block;
+      height: 130px;
+      outline: none;
+      cursor: pointer;
+      font-family: 'Do Hyeon', sans-serif;
+      .plus_icon {
+        width: 100px;
+        height: 100px;
+      }
+
     }
-    .add_menu{
-      width:auto;
-      height:auto;
-      input{
-        display:block;
+
+    .add_menu_detail {
+      display: none;
+      height: 200px;
+      text-align: left;
+      table {
+        td {
+          padding-top: 10px;
+        }
       }
     }
 
   }
-}
+  }
+/////////////////////
+
+  .register_wrap {
+    margin: 40px auto 0;
+    width: 1000px;
+    height: 800px;
+
+    .register_logo {
+      width: 185px;
+      height: 120px;
+      display: block;
+      margin: auto auto;
+      position: relative;
+      background: url(22222.jpg) no-repeat;
+    }
+    .register_display {
+      margin: 20px auto 0;
+      width: 250px;
+      height: 230px;
+      text-align: center;
+      font-size: small;
+
+      table{
+        td{
+          padding-left:25px;
+          padding-bottom:20px;
+        }
+
+      }
+    }
+  }
+
+
+
 
 
