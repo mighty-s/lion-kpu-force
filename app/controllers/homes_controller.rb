@@ -12,7 +12,8 @@ class HomesController < ApplicationController
 
   end
 
-  def second_new
+  def index
 
   end
+
 end

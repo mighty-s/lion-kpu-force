@@ -7,16 +7,7 @@ class OperatorsController < ApplicationController
                   name: params[:operator_name]
     )
 
-    redirect_to '/homes#index'
-  end
-
-  def second_create
-    @br=Branch.create(
-                  universe: params[:uni],
-                  major: params[:major]
-    )
-
-    redirect_to '/homes#index', notice: "회원가입 완료!!"
+    redirect_to '/homes/index'
   end
 
   def index

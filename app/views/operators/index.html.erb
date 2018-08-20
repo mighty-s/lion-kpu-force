@@ -1,1 +1,52 @@
-<h1>운영자 메인 페이지</h1>
+<!--<h1>운영자 메인 페이지</h1>-->
+
+
+<%#= link_to '로그아웃', session_path(current_operator.user_id), method: 'delete' %>
+
+
+<div class="operator_wrap">
+  <% if operator_signed_in? %>
+    로그인한 유저:
+    <%= current_operator.user_id %>
+  <% end %>
+  <p><%= link_to '로그아웃', session_path(current_operator.user_id), method: 'delete' %></p>  <!-- 로그아웃되게 해주세요.... -->
+  <div class="operator_logo"></div>
+  <nav class="operator_bar_nav">
+    <ul class="operator_bar_list">
+      <hr>
+      <a href="#">테이블 현황</a>
+      <a href="#">테이블 생성</a>
+      <a href="#">메뉴 생성</a>
+      <a href="#">사용법</a>
+      <hr>
+    </ul>
+  </nav>
+  <section class="creat_menu_section">
+    <article class=""></article>
+  </section><!-- kpu section end -->
+</div>
+
+<div class="table-status">
+  <section class="table-status-left">
+    <ul>
+      <li><a href="#">테이블 배치</a></li>
+      <li><a href="#">주문 내역</a></li>
+      <li><a href="#">매 출</a></li>
+    </ul>
+  </section>
+
+  <section class="table-status-middle">
+
+    <article class="table-num1"><a href="#"><img src="" alt=""></a></article>
+    <article class="table-num2"><a href="#"><img src="" alt=""></a></article>
+    <article class="table-num3"><a href="#"><img src="" alt=""></a></article>
+    <article class="table-num4"><a href="#"><img src="" alt=""></a></article>
+    <article class="table-num5"><a href="#"><img src="" alt=""></a></article>
+    <article class="table-num6"><a href="#"><img src="" alt=""></a></article>
+    <article class="table-num7"><a href="#"><img src="" alt=""></a></article>
+    <article class="table-num8"><a href="#"><img src="" alt=""></a></article>
+
+  </section>
+
+</div>
+</section>
