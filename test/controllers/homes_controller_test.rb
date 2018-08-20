@@ -1,5 +1,8 @@
 require 'test_helper'
 
+<<<<<<< HEAD:test/controllers/homes_controller_test.rb
+class HomesControllerTest < ActionDispatch::IntegrationTest
+=======
 class UserControllerTest < ActionDispatch::IntegrationTest
 <<<<<<< HEAD
   test "should get viewmenu" do
@@ -28,6 +31,7 @@ class UserControllerTest < ActionDispatch::IntegrationTest
   end
 
 =======
+>>>>>>> dffeb31dcfc912f3e13ef788092c0ade1a71f1ab:test/controllers/user_controller_test.rb
   # test "the truth" do
   #   assert true
   # end

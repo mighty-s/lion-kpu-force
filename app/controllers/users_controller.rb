@@ -1,5 +1,4 @@
-class UserController < ApplicationController
-
+class UsersController < ApplicationController
   def viewmenu
   end
 
@@ -14,4 +13,5 @@ class UserController < ApplicationController
 
   def menual_user
   end
+
 end
