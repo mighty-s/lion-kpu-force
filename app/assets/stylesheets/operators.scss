@@ -79,9 +79,11 @@
     .add_menu_detail{
       display:none;
       height:200px;
-
-      input{
-        display:block;
+      text-align:left;
+      table{
+        td{
+          padding-top:10px;
+        }
       }
     }
 
