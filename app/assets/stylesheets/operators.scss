@@ -40,8 +40,6 @@
   }
 }
 
-//////////////////////////////////////////////////////////////////////////////////////
-
 .operator_wrap {
   margin: 0 auto;
   width: 1000px;
@@ -95,11 +93,6 @@
 #operators_create_menu{
 
 }
-//////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-
-
 
 .table-status{
   margin-top: 10px;
@@ -199,9 +192,8 @@
         height: 100%;
         width: 100%;
       }
-
     }
-
+    
     .table-num4
     {
 
@@ -248,7 +240,6 @@
     }
     .table-num7
     {
-
       margin: 20px;
       width: 20%;
       height: 200px;
@@ -258,11 +249,10 @@
         height: 100%;
         width: 100%;
       }
-
     }
+    
     .table-num8
     {
-
       margin: 20px;
       width: 20%;
       height: 200px;
@@ -274,21 +264,30 @@
       }
 
     }
-
-
-
-
+    
     &::after {
       content: '';
       display: block;
       clear: both;
     }
-
-
-
   }
-
 }
+    .add_menu_detail 
+     {
+      display: none;
+      height: 200px;
+      text-align: left;
+      table 
+      {
+        td 
+        {
+          padding-top: 10px;
+        }
+      }
+     }
+   }
+}
+
 
 
 

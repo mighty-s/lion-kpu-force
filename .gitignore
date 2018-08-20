@@ -21,4 +21,10 @@
 /yarn-error.log
 
 .byebug_history
+
+# JetBrains 관련 파일 무시
 /.idea/
+
+
+# db/schema.rb 파일 무시 (각자 rails db:migrate할것)
+/db/schema.rb
