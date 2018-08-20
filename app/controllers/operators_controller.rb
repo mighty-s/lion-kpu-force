@@ -1,6 +1,7 @@
 class OperatorsController < ApplicationController
   def create
     @op=Operator.create(
+
                   user_id: params[:operator_id],
                   password: params[:password],
                   phone: params[:operator_phone],
