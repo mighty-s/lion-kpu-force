@@ -27,4 +27,4 @@
 
 
 # db/schema.rb 파일 무시 (각자 rails db:migrate할것)
-/db/schema.rb
+db/schema.rb
