@@ -1,15 +1,16 @@
 <div class="login_wrap">
   <form action="<%= sessions_path %>" method="post">
     <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
-    <header class="login_logo"></header>
-    <section class="login_display">
-      <input class="ID_login" type="text" placeholder="ID">
-      <p>
-        <input class="pw_login" type="password" placeholder="Password" >
-      <p>
-        <input class="submit_login" type="submit"  value="로그인">
-      <p>
-        <%= link_to '운영자 회원가입', new_operator_path %>
-    </section> <!-- login_display end -->
+    
+  <header class="login_logo"></header>
+  <section class="login_display">
+    <input class="ID_login" type="text" placeholder="ID" name="op_id" >
+    <p>
+      <input class="pw_login" type="password" placeholder="Password" name="password" >
+    <p>
+      <input class="submit_login" type="submit"  value="로그인">
+    <p>
+      <%= link_to '운영자 회원가입', new_operator_path %>
+  </section> <!-- login_display end -->
   </form>
 </div> <!-- login_wrap end -->

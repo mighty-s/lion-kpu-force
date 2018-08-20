@@ -4,7 +4,6 @@ class CreateSeatOnuses < ActiveRecord::Migration[5.1]
 
       t.string :hash_code
       t.belongs_to :structure
-      t.string :status
       t.timestamps
     end
   end
