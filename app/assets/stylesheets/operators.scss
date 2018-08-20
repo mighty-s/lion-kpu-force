@@ -1,4 +1,9 @@
 
+
+
+
+
+
 // Place all the styles related to the operators controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
@@ -53,26 +58,41 @@
   }
 
   .create_menu_section {
-    margin-top:30px;
+    margin-top: 30px;
     width: 1000px;
     height: 700px;
-    //background-color:pink;
 
+    .add_menu_click{
+      width:100px;
+      height:130px;
+      outline:none;
+      cursor:pointer;
+      .plus_icon{
+        width:100px;
+        height:100px;
+      }
 
-    .plus_icon {
-      width: 100px;
-      height: 100px;
-      display:block;
     }
-    .add_menu{
-      width:auto;
-      height:auto;
+
+    .add_menu_detail{
+      display:none;
+      height:200px;
+
       input{
         display:block;
       }
     }
 
-  }
-}
+    .add_menu_click:focus + .add_menu_detail{
+      display:block;
+    }
 
+  }
+
+
+    //-------------
+
+
+
+}
 

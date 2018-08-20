@@ -12,13 +12,18 @@
     </ul>
   </nav>
 
-  <section class="create_menu_section">
-    <%=image_tag "Add-icon.png", class: "plus_icon"%>
-    메뉴 추가
-    <section  hidden class="add_menu">
+  <section class="create_menu_section"><!-- 상단바 밑 전체 화면 -->
+
+    <div class="add_menu_click" tabindex="1">
+      <%= image_tag "Add-icon.png", class: "plus_icon" %>
+      메뉴 추가
+    </div><!-- add_menu_click end -->
+
+    <div class="add_menu_detail">
       <input type="file">
       <input type="text">
-    </section>
+    </div><!-- add_menu_detail end -->
+
 
   </section><!-- kpu section end -->
 </div>
