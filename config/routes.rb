@@ -18,7 +18,7 @@ Rails.application.routes.draw do
 
   root 'operators#index'
 
-  resources :users
+  #resources :users
   resource :table_managements
   resource :operators
   resource :menu_managements
@@ -26,7 +26,7 @@ Rails.application.routes.draw do
 
   # ------------------  routes 소현이 ----------------
 
-  get 'usesr/order'
+  get 'users/order'
   get 'homes/register'
   get 'homes/register_second'
 
