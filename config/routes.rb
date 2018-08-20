@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   resources :homes
   resources :sessions
   resources :operators
+  resources :users
 end

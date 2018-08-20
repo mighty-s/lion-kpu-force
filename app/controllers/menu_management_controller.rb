@@ -1,2 +1,0 @@
-class MenuManagementController < ApplicationController
-end
