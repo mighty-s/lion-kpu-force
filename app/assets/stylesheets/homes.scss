@@ -1,9 +1,9 @@
-// Place all the styles related to the home controller here.
+// Place all the styles related to the homes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-#home_login {
+#homes_index {
   .login_wrap {
     margin: 40px auto 0;
     width: 1000px;
@@ -44,32 +44,3 @@
   }
 }
 
-.register_wrap {
-  margin: 40px auto 0;
-  width: 1000px;
-  height: 800px;
-
-  .register_logo {
-    width: 185px;
-    height: 120px;
-    display: block;
-    margin: auto auto;
-    position: relative;
-    background: url(22222.jpg) no-repeat;
-  }
-  .register_display {
-    margin: 20px auto 0;
-    width: 250px;
-    height: 230px;
-    text-align: center;
-    font-size: small;
-
-    table{
-      td{
-        padding-left:25px;
-        padding-bottom:20px;
-      }
-
-    }
-  }
-}

@@ -1,0 +1,40 @@
+<form action="<%= operators_path %>" method="post" id="signin_form" data-ajax="false">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <div class="register_wrap">
+    <header class="register_logo"></header>
+    <section class="register_display">
+
+      <table>
+        <tr>
+          <td>아이디</td>
+          <td><input type="text" name="operator_id"></td>
+        </tr>
+        <tr>
+          <td>비밀번호</td>
+          <td><input type="password" id="Pw" name="password" required></td>
+        </tr>
+        <tr>
+          <td>비밀번호 확인</td>
+          <td>
+            <input type="password" id="PwCheck" name="password_confirmation" required>
+            <p id="pwsame" class="pwsame" style="color:red;"></p>
+            <br><br>
+          </td>
+        </tr>
+
+        <tr>
+          <td>이름</td>
+          <td><input type="text" name="operator_name"></td>
+        </tr>
+        <tr>
+          <td>전화번호</td>
+          <td><input type="number" name="operator_phone"></td>
+        </tr>
+      </table>
+
+      <input class="next_register" type="submit" value="확인">
+    </section> <!-- login_display end -->
+  </div> <!-- login_wrap end -->
+
+
+</form>

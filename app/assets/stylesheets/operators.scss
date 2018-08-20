@@ -61,39 +61,67 @@
     margin-top: 30px;
     width: 1000px;
     height: 700px;
-    text-align:center;
+    text-align: center;
 
-    .add_menu_click{
-      width:100px;
-      height:130px;
-      outline:none;
-      cursor:pointer;
+    .add_menu_click {
+      width: 100px;
+      height: 130px;
+      outline: none;
+      cursor: pointer;
       font-family: 'Do Hyeon', sans-serif;
-      .plus_icon{
-        width:100px;
-        height:100px;
+      .plus_icon {
+        width: 100px;
+        height: 100px;
       }
 
     }
 
-    .add_menu_detail{
-      display:none;
-      height:200px;
-      text-align:left;
-      table{
-        td{
-          padding-top:10px;
+    .add_menu_detail {
+      display: none;
+      height: 200px;
+      text-align: left;
+      table {
+        td {
+          padding-top: 10px;
         }
       }
     }
 
+  }
+  }
+/////////////////////
 
+  .register_wrap {
+    margin: 40px auto 0;
+    width: 1000px;
+    height: 800px;
+
+    .register_logo {
+      width: 185px;
+      height: 120px;
+      display: block;
+      margin: auto auto;
+      position: relative;
+      background: url(22222.jpg) no-repeat;
+    }
+    .register_display {
+      margin: 20px auto 0;
+      width: 250px;
+      height: 230px;
+      text-align: center;
+      font-size: small;
+
+      table{
+        td{
+          padding-left:25px;
+          padding-bottom:20px;
+        }
+
+      }
+    }
   }
 
 
-    //-------------
 
 
-
-}
 

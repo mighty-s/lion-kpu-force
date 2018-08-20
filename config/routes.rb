@@ -1,22 +1,27 @@
 Rails.application.routes.draw do
+
+  root 'homes#index'
+
+  resources :homes
+  resources :sessions
+  resources :operators
+
   get 'operators/create_menu'
 
   get 'user/viewmenu'
 
   get 'user/order'
-  get 'home/register'
-  get 'home/register_second'
+  get 'homes/register'
+  get 'homes/register_second'
 
   get 'user/order_history'
 
   get 'user/logout_user'
 
   get 'user/menual_user'
-  get 'operators/creat_menu'
+  get 'homes/index'
 
-  root 'home#login'
-  get 'home/login'
 
-  get 'test/index'
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
