@@ -8,7 +8,7 @@ class OperatorsController < ApplicationController
                   name: params[:operator_name]
     )
 
-    redirect_to '/homes/index'
+    redirect_to '/homes#index'
   end
 
   def index

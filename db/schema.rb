@@ -65,7 +65,7 @@ ActiveRecord::Schema.define(version: 20180818082518) do
     t.datetime "updated_at", null: false
     t.index ["branch_id"], name: "index_seat_strutures_on_branch_id"
   end
-  
+
   create_table "users", force: :cascade do |t|
     t.string "user_id"
     t.string "pw"
@@ -74,4 +74,5 @@ ActiveRecord::Schema.define(version: 20180818082518) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
 end
