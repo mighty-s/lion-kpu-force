@@ -1,7 +1,12 @@
 +--------------------+<br>
 | 메뉴를 작성해 주세요 |<br>
 +--------------------+<br>
+<%=form_for(Menu.new, url: menu_managements_path, method: "post") do |f|%>
+  <%=f.label :title, '이름' %>
+  <%=f.text_field :name, required: true%> <br>
 
-<%= form_for(Menu.new, url: menu_managements_path, method: "post") do |f| %>
-
+  <%=f.label :contents, '가격'%>
+  <%=f.number_field :price, required: true %> <br>
+  <%=hidden_field_tag 'br_id', params[:br_id] %>
+  <%=f.submit '만들기'%>
 <%end%>

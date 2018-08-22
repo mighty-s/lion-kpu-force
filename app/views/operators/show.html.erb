@@ -1,0 +1,11 @@
+<% @br.each do |x| %>
+  <div>
+    <p><%=x.id%></p>
+
+    <form action="<%= operators_path%>" method="get">
+      <input type="hidden" name = "authenticity_token" value="<%=@token%>">
+      <input type="hidden" name = "op_id" value = "<%=x.id%>">
+      <input type="submit" value="지점 이동">
+    </form>
+  </div>
+<% end %>

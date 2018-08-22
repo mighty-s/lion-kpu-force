@@ -4,7 +4,9 @@ class SessionsController < ApplicationController
       operator=Operator.find_by(user_id: params[:op_id])
       if operator && operator.authenticate(params[:password])
         log_in(operator)
-        redirect_to operators_path, method: :get
+        redirect_to select_branches_path, method: :get
+        #redirect_to operators_path, method: :get
+        #redirect_to users_path, method: :get
       else
         flash[:alert]="아이디 혹은 비밀번호가 일치하지 않습니다."
         redirect_to homes_path, method: :get

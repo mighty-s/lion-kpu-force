@@ -52,14 +52,15 @@ ActiveRecord::Schema.define(version: 20180818082518) do
 
   create_table "seat_onuses", force: :cascade do |t|
     t.string "hash_code"
-    t.integer "structure_id"
+    t.integer "structures_id"
+    t.string "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["structure_id"], name: "index_seat_onuses_on_structure_id"
+    t.index ["structures_id"], name: "index_seat_onuses_on_structures_id"
   end
 
   create_table "seat_strutures", force: :cascade do |t|
-    t.string "name"
+    t.string "status"
     t.integer "branch_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

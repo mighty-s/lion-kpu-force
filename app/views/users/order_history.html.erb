@@ -1,12 +1,18 @@
 <div class="user_wrap">
-  <p><a href="#">로그아웃</a></p>  <!-- 로그아웃되게 해주세요.... -->
-  <div class="user_logo"></div>
+  <% if operator_signed_in? %>
+    로그인한 유저:
+    <%= current_operator.user_id %>
+  <% end %>
+  <p><%= link_to '로그아웃', session_path(current_operator.user_id), method: 'delete' %></p>  <!-- 로그아웃되게 해주세요.... -->
+  <a href="/users#index">
+    <div class="user_logo"></div>
+  </a>
   <nav class="user_bar_nav">
     <ul class="user_bar_list">
       <hr>
-      <a href="#">주문하기</a>
-      <a href="#">주문내역</a>
-      <a href="#">사용법</a>
+      <%= link_to '주문하기', users_path %>
+      <%= link_to '주문내역', '/users/order_history' %>
+      <%= link_to '사용법', '/users/menual_user' %>
       <hr>
     </ul>
   </nav>
@@ -15,11 +21,12 @@
 <div class="order-history">
   <section class="order-history-table">
     <li>No.3</li>  <!-- 테이블 정보를 받아서 그수 를 출력-->
-  </section> <!-- order-history-table-->
+  </section> <!-- index-history-table-->
 
-  <section class="order-history-menu"><ul>
-    <li class="order-history-menu-top">주문한 메뉴</li>
-  </ul>
+  <section class="order-history-menu">
+    <ul>
+      <li class="order-history-menu-top">주문한 메뉴</li>
+    </ul>
     <section class="order-history-menu-bottum">
       <ul>
         <li>1</li>
@@ -29,14 +36,15 @@
         <li>5</li>
         <li>6</li>
       </ul>
-    </section><!--order-history-menu-bottum-->
+    </section><!--index-history-menu-bottum-->
 
-    <section class="order-history-menu-bottum-total"><ul>
+    <section class="order-history-menu-bottum-total">
+    <ul>
       <li>총        합</li>
     </ul>
-    </section><!--order-history-menu-bottum-total-->
+    </section><!--index-history-menu-bottum-total-->
 
-  </section><!--order-history-menu-->
+  </section><!--index-history-menu-->
 
   <section class="order-history-price"><ul>
     <li class="order-history-menu-price">가격</li>
@@ -51,14 +59,14 @@
         <li>6</li>
       </ul>
 
-    </section><!--order-history-price-bottum-->
+    </section><!--index-history-price-bottum-->
     <section class="order-history-price-bottum-total">
       <ul>
         <li>30000</li>
       </ul>
-    </section><!--order-history-menu-bottum-total-->
+    </section><!--index-history-menu-bottum-total-->
 
 
-  </section><!--order-history-price-->
+  </section><!--index-history-price-->
 
-</div> <!-- order-history-->
+</div> <!-- index-history-->

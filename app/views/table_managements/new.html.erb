@@ -1,8 +1,11 @@
-+--------------------+<br>
++———————————+<br>
 | 테이블을 작성해 주세요 |<br>
-+--------------------+<br>
++———————————+<br>
 
-<%= form_for(Menu.new, url: menu_managements_path, method: "post") do |f| %>
-
-
-<%end%>
+<form action="<%= table_managements_path %>" method="post">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <input type="text" name="table_number" placeholder="테이블 수">
+  <input type="hidden" name="br_id" value="<%=params[:br_id]%>">
+  <br>
+  <input type="submit" value="만들기">
+</form>

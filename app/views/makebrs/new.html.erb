@@ -1,0 +1,15 @@
+<div>
+
+  <div>
+    <p><%=session[:operator_id]%></p>
+
+    <form action="<%=makebrs_path%>" method="post">
+      <input type="hidden" name = "authenticity_token" value="<%=@token%>">
+      <input type="hidden" name = "op_id" value = "<%=session[:operator_id]%>">
+      <input type="text" name = "branch_school" placeholder="학교">
+      <input type="text" name = "branch_major" placeholder="학과">
+      <input type="submit" value="지점만들기">
+    </form>
+  </div>
+
+</div>

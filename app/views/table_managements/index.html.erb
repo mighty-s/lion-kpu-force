@@ -1,0 +1,25 @@
+<h1>테이블 메인</h1>
+
+<br><br>
+<%= link_to '테이블 만들기', '/table_managements/new/'+params[:br_id] %>
+<br><br>
+<%= link_to '테이블 수정하기', '#' %>
+<br><br>
+<%= link_to '테이블 삭제하기', '#' %>
+<br><br>
+<br>
+
+
+<% @t_id.each do |x| %>
+  <div>
+    <p><%=x.id%></p>
+    <p><%=x.status%></p>
+
+    <form action="<%= table_management2s_path %>" method="post">
+      <input type="hidden" name = "authenticity_token" value="<%=@token%>">
+      <input type="hidden" name = "table_id" value = "<%=x.id%>">
+      <input type="submit" value="클릭">
+    </form>
+
+  </div>
+<% end %>

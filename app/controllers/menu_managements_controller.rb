@@ -1,22 +1,22 @@
 class MenuManagementsController < ApplicationController
-
   def index
 
   end
 
-  def new
-
-  end
-
   def create
+    @menu = Menu.create(
+        name: params[:menu][:name],
+        price: params[:menu][:price],
+        branch_id: params[:br_id]
+    )
 
   end
 
-  def index_menu
+  def show
 
   end
 
-  def show_menu
+  def index
 
   end
 
@@ -24,4 +24,11 @@ class MenuManagementsController < ApplicationController
 
   end
 
+  def delete
+
+  end
+
+  def new
+
+  end
 end
