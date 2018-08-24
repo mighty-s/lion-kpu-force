@@ -61,7 +61,7 @@
 .video{
   width: 668px;
   height: 376px;
-  margin: auto auto;
+  margin-top: 20px;
   position:relative;
   iframe{
 
@@ -290,7 +290,7 @@
 
   .order-history-menu-top{
     display: inline-block;
-    width : 500px;
+    width : 100%;
     text-align: center;
     font-size:  30px;
     background: #cfcfcfcf;
@@ -298,7 +298,7 @@
   .order-history-menu-bottum{
 
     margin-top: 20px;
-    width : 500px;
+    width : 100%;
     height: 80%;
     background: #cfcfcfcf;
     li{
@@ -311,7 +311,7 @@
   }
   .order-history-menu-bottum-total {
     margin-top: 10px;
-    width : 500px;
+    width : 100%;
     text-align: center;
     font-size:  30px;
     background: #cfcfcfcf;
@@ -322,6 +322,7 @@
   }
 }
 .order-history{
+
   .order-history-price{
     float:left;
     width : 15%;
@@ -362,10 +363,10 @@
 
 
   }
-  content: '';
-  display: block;
-  clear: both;
+  &::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
 
 }
-
-

@@ -1,8 +1,65 @@
-+--------------------+<br>
-| 테이블을 작성해 주세요 |<br>
-+--------------------+<br>
+<div class="operator_wrap">
+  <% if operator_signed_in? %>
+    로그인한 유저:
+    <%= current_operator.email %>
+  <% end %>
+  <p><%= link_to '로그아웃', session_path(current_operator.email), method: 'delete' %></p>
+  <div class="operator_logo"></div>
+  <nav class="operator_bar_nav">
+    <ul class="operator_bar_list">
+      <hr>
+      <%= link_to '주문 현황', '/bill_checks/index/' + params[:br_id] %>
+      <a href="#">테이블 생성</a>
+      <%= link_to '메뉴', '/menu_managements/new/'+params[:br_id] %>
+      <a href="#">사용법</a>
+      <hr>
+    </ul>
+    <ul class="menu_bar">
+      <div class="test">
+        <%= link_to '메뉴 생성', '/menu_managements/new/'+params[:br_id] %>
+        <a href="#">메뉴 수정</a>
+        <a href="#">메뉴 삭제</a>
+      </div>
+    </ul>
 
-<%= form_for(Menu.new, url: menu_managements_path, method: "post") do |f| %>
+  </nav>
+
+</div>
+
+<wrap class="back">
+  <div class="table_mg_section">
+    <form action="<%= table_managements_path %>" method="post">
+      <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+      <input type="text" name="table_number" placeholder="테이블 수">
+      <input type="hidden" name="br_id" value="<%=params[:br_id]%>">
+      <br>
+      <input type="submit" value="만들기">
+    </form>
+
+  </div>
+
+</wrap>
 
 
-<%end%>
+<br><br><br><br><br><br>
+<% @t_id.each do |x| %>
+  <div>
+    <p><%=x.id%></p>
+    <p><%=x.status%></p>
+
+    <form action="<%= table_management2s_path%>" method="post">
+      <input type="hidden" name = "authenticity_token" value="<%=@token%>">
+      <input type="hidden" name = "table_id" value = "<%=x.id%>">
+      <input type="hidden" name = "br_id" value="<%=x.branch_id %>">
+      <input type="submit" value="클릭">
+    </form>
+
+    <%= link_to table_management_path(x.id), method: 'delete' do %>
+      <input type="hidden" name="authenticity_token" value="<%= @token %>">
+      <input type="hidden" name="br_id" value="<%= x.branch_id %>">
+      <button>삭제하기</button><br>
+    <% end %>
+    <br><br>
+
+  </div>
+<% end %>

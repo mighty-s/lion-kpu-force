@@ -1,10 +1,11 @@
 class Operator < ApplicationRecord
   has_many :branches
-  
-  before_save {self.user_id=user_id.downcase}
+  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/i
+  before_save {self.email=email.downcase}
   has_secure_password
   validates :name, presence: true
-  validates :user_id, presence: true,
+  validates :email, presence: true,
+            format:{with: VALID_EMAIL_REGEX},
            uniqueness: {case_sensitive: false}
 
 end

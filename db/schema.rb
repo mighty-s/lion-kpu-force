@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180818082518) do
+ActiveRecord::Schema.define(version: 20180823110516) do
 
   create_table "branches", force: :cascade do |t|
     t.string "universe"
@@ -24,14 +24,16 @@ ActiveRecord::Schema.define(version: 20180818082518) do
   create_table "menus", force: :cascade do |t|
     t.string "name"
     t.integer "price"
+    t.string "content"
     t.integer "branch_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "image"
     t.index ["branch_id"], name: "index_menus_on_branch_id"
   end
 
   create_table "operators", force: :cascade do |t|
-    t.string "user_id"
+    t.string "email"
     t.string "password_digest"
     t.string "phone"
     t.string "status"
@@ -41,25 +43,26 @@ ActiveRecord::Schema.define(version: 20180818082518) do
   end
 
   create_table "orders", force: :cascade do |t|
-    t.integer "seat_used_id"
+    t.integer "seat_onsue_id"
     t.integer "menu_id"
     t.integer "amount"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["menu_id"], name: "index_orders_on_menu_id"
-    t.index ["seat_used_id"], name: "index_orders_on_seat_used_id"
+    t.index ["seat_onsue_id"], name: "index_orders_on_seat_onsue_id"
   end
 
   create_table "seat_onuses", force: :cascade do |t|
     t.string "hash_code"
-    t.integer "structure_id"
+    t.integer "structures_id"
+    t.string "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["structure_id"], name: "index_seat_onuses_on_structure_id"
+    t.index ["structures_id"], name: "index_seat_onuses_on_structures_id"
   end
 
   create_table "seat_strutures", force: :cascade do |t|
-    t.string "name"
+    t.string "status"
     t.integer "branch_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

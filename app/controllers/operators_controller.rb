@@ -1,8 +1,7 @@
 class OperatorsController < ApplicationController
   def create
     @op=Operator.create(
-
-                  user_id: params[:operator_id],
+                  email: params[:email],
                   password: params[:password],
                   phone: params[:operator_phone],
                   name: params[:operator_name]
@@ -12,6 +11,9 @@ class OperatorsController < ApplicationController
   end
 
   def index
+
+  end
+  def show
 
   end
 end

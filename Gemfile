@@ -5,6 +5,11 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem 'hashids'
+gem 'carrierwave'
+gem 'fog-aws'
+gem 'mini_magick'
+
 # alternative           / add : khj, date : 2018.8.16
 gem 'pry-rails'
 

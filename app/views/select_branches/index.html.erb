@@ -1,0 +1,48 @@
+<%#= link_to '지점 만들기', new_makebr_path %>
+<!--<br><br>-->
+
+<%# @br.each do |x| %>
+<!--  <div>-->
+<!--    <p><%#= x.id %></p>-->
+
+<!--    <form action="<%#= operators_path %>" method="get">-->
+<!--      <input type="hidden" name="authenticity_token" value="<%#= @token %>">-->
+<!--      <input type="hidden" name="br_id" value="<%#= x.id %>">-->
+<!--      <input type="submit" value="지점 이동">-->
+<!--    </form>-->
+<!--  </div>-->
+<%# end %>
+
+<!--//////////////////////////////////////////////////////-->
+
+<div class="total">
+
+
+  <header class="main_logo"></header>
+  <section class="select_branches_display">
+
+
+
+    <br><br>
+    <% @br.each do |x| %>
+      <div class="select_branches_box">
+        <p>번호: <%= x.id %></p>
+        <p>대학교: <%= x.universe %></p>
+        <p>학과: <%= x.major %></p>
+
+
+        <form action="<%= bill_checks_path %>" method="get">
+          <input type="hidden" name="authenticity_token" value="<%= @token %>">
+          <input type="hidden" name="br_id" value="<%= x.id %>">
+          <input type="submit" value="지점 이동">
+        </form>
+      </div>
+    <% end %>
+    <div class="makeb">
+      <%= link_to '지점 만들기', new_makebr_path ,class: "makebrs" %>
+    </div>
+  </section> <!-- login_display end -->
+
+</div> <!-- login_wrap end -->
+
+

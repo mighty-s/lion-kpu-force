@@ -1,0 +1,21 @@
+<%= link_to '메뉴________', '#'%>
+<%= link_to '테이블________', '/table_managements/new/' + params[:br_id] %>
+<%= link_to '주문 현황 보기________', '#' %>
+<a href="https://www.youtube.com/watch?v=Jitf9tgAJEw&index=7&list=RD5shZgGNGs58">사용법</a>
+<br><br><br>
++--------------------+<br>
+| 메뉴를 수정해 주세요 |<br>
++--------------------+<br>
+<%= form_for(@menu123, url: menu_management_path, method: "put") do |f| %>
+  <%= f.label :name, '이름' %>
+  <%= f.text_field :name, required: true %> <br>
+
+  <%= f.label :price, '가격' %>
+  <%= f.number_field :price, required: true %> <br>
+
+  <%= f.label :content, '내용' %>
+  <%= f.text_area :content, required: true %> <br>
+
+  <%= hidden_field_tag 'br_id', params[:br_id] %>
+  <%= f.submit '수정하기' %>
+<% end %>

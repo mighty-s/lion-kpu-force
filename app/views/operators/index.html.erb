@@ -1,31 +1,47 @@
+<!--<h1>지점 </h1>-->
+<!--<br><br><br>-->
+<!--<%#= link_to '회원가입', new_home_path %><br>-->
+<%#= link_to '메뉴', 'menu_managements/index/'+params[:br_id]%>
+<!--<br><br>-->
 
-<!--<h1>운영자 메인 페이지</h1>-->
+<%#= link_to '테이블', 'table_managements/index/'+params[:br_id]%>
 
-<%#= link_to '로그아웃', session_path(current_operator.user_id), method: 'delete' %>
 
+<!--<br><br>-->
+<%#= link_to '주문 현황 보기', '#' %>
+<!--<br><br>-->
+<!--<a href="https://www.youtube.com/watch?v=Jitf9tgAJEw&index=7&list=RD5shZgGNGs58">사용법</a>-->
+<!--<br><br>-->
+
+<!--홍준이형-->
 
 <div class="operator_wrap">
-  <% if operator_signed_in? %>
+<% if operator_signed_in? %>
     로그인한 유저:
-    <%= current_operator.user_id %>
-  <% end %>
-  <p><%= link_to '로그아웃', session_path(current_operator.user_id), method: 'delete' %></p>  <!-- 로그아웃되게 해주세요.... -->
+<%= current_operator.email %>
+<% end %>
+  <p><%= link_to '로그아웃', session_path(current_operator.email), method: 'delete' %></p>
   <div class="operator_logo"></div>
   <nav class="operator_bar_nav">
     <ul class="operator_bar_list">
       <hr>
       <a href="#">테이블 현황</a>
       <a href="#">테이블 생성</a>
-      <a href="#">메뉴 생성</a>
+      <%= link_to '메뉴', '/menu_managements/new/'+params[:br_id] %>
       <a href="#">사용법</a>
       <hr>
     </ul>
-  </nav>
-  <section class="creat_menu_section">
-    <article class=""></article>
-  </section><!-- kpu section end -->
-</div>
+    <ul class="menu_bar">
+      <div class="test">
+        <%= link_to '메뉴 생성', '/menu_managements/new/'+params[:br_id] %>
+        <a href="#">메뉴 수정</a>
+        <a href="#">메뉴 삭제</a>
+      </div>
+    </ul>
 
+  </nav>
+
+</div>
 <div class="table-status">
   <section class="table-status-left">
     <ul>

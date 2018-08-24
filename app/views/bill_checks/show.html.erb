@@ -1,0 +1,17 @@
+<%= link_to '메뉴 만들기________', '/menu_managements/new/' + params[:br_id] %>
+<%= link_to '테이블 만들기_______', '/table_managements/new/' + params[:br_id] %>
+<%= link_to '주문 현황 보기_______', '/bill_checks/index/' + params[:br_id] %>
+<a href="https://www.youtube.com/watch?v=Jitf9tgAJEw&index=7&list=RD5shZgGNGs58">사용법</a>
+<br><br>
+
+<% @table.each do |x| %>
+  <div>
+    <p>메뉴명 : <%=x.name%></p>
+    <p>합계 : <%=x.menu_total_price%>원</p>
+    <p>수량 : <%=x.menu_count%></p>
+    <p>낱개 가격 : <%=x.amount%></p>
+
+    <br>
+
+  </div>
+<% end %>

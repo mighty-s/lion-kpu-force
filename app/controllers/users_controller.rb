@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   def viewmenu
   end
 
-  def order
+  def index
   end
 
   def order_history
