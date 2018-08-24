@@ -1,0 +1,63 @@
+<%#= link_to '메뉴 만들기________', '/menu_managements/new/' + params[:br_id] %>
+<%#= link_to '테이블 만들기________', '/table_managements/new/' + params[:br_id] %>
+<%#= link_to '주문 현황 보기_______', '/bill_checks/index/' + params[:br_id] %>
+<!--<a href="https://www.youtube.com/watch?v=Jitf9tgAJEw&index=7&list=RD5shZgGNGs58">사용법</a>-->
+<!--<br><br><br>-->
+
+<%# @t_id.each do |x| %>
+<!--  <div>-->
+<!--    <p><%#=x.id%>번 테이블</p>-->
+<!--    <form action="<%#= bill_check_path(x.id)%>">-->
+<!--      <input type="hidden" name = "authenticity_token" value="<%#=@token%>">-->
+<!--      <input type="hidden" name = "table_id" value = "<%#=x.id%>">-->
+<!--      <input type="hidden" name = "br_id" value="<%#=x.branch_id %>">-->
+<!--      <input type="submit" value="주문내역">-->
+<!--    </form>-->
+<!--    <br>-->
+<!--  </div>-->
+<%# end %>
+
+
+<!--/////////////////////////////////////////////////////-->
+
+
+<div class="operator_wrap">
+  <% if operator_signed_in? %>
+    로그인한 유저:
+    <%= current_operator.email %>
+  <% end %>
+  <p><%= link_to '로그아웃', session_path(current_operator.email), method: 'delete' %></p>
+  <div class="operator_logo"></div>
+  <nav class="operator_bar_nav">
+    <ul class="operator_bar_list">
+      <hr>
+      <%= link_to '주문 현황', '/bill_checks/index/'+params[:br_id] %>
+      <%= link_to '테이블 만들기', '/table_managements/new/' +params[:br_id] %>
+      <a class="menu_icon" href="#">메뉴</a>
+      <a href="https://www.youtube.com/watch?v=Jitf9tgAJEw&index=7&list=RD5shZgGNGs58">사용법</a>
+      <hr>
+    </ul>
+    <ul class="menu_bar">
+      <div class="test">
+        <%= link_to '메뉴 생성', '/menu_managements/new/'+params[:br_id] %>
+        <a href="#">메뉴 수정</a>
+        <a href="#">메뉴 삭제</a>
+      </div>
+    </ul>
+
+  </nav>
+
+  <% @t_id.each do |x| %>
+    <div>
+      <p><%=x.id%>번 테이블</p>
+      <form action="<%= bill_check_path(x.id)%>">
+        <input type="hidden" name = "authenticity_token" value="<%=@token%>">
+        <input type="hidden" name = "table_id" value = "<%=x.id%>">
+        <input type="hidden" name = "br_id" value="<%=x.branch_id %>">
+        <input type="submit" value="주문내역">
+      </form>
+      <br>
+    </div>
+  <% end %>
+  
+</div>

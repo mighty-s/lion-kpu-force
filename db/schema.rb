@@ -24,10 +24,11 @@ ActiveRecord::Schema.define(version: 20180823110516) do
   create_table "menus", force: :cascade do |t|
     t.string "name"
     t.integer "price"
+    t.string "content"
     t.integer "branch_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "avatar"
+    t.string "image"
     t.index ["branch_id"], name: "index_menus_on_branch_id"
   end
 
@@ -42,13 +43,13 @@ ActiveRecord::Schema.define(version: 20180823110516) do
   end
 
   create_table "orders", force: :cascade do |t|
-    t.integer "seat_used_id"
+    t.integer "seat_onsue_id"
     t.integer "menu_id"
     t.integer "amount"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["menu_id"], name: "index_orders_on_menu_id"
-    t.index ["seat_used_id"], name: "index_orders_on_seat_used_id"
+    t.index ["seat_onsue_id"], name: "index_orders_on_seat_onsue_id"
   end
 
   create_table "seat_onuses", force: :cascade do |t|
