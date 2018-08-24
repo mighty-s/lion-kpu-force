@@ -1,3 +1,492 @@
-// Place all the styles related to the menu_managements controller here.
+// Place all the styles related to the operators controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+// Place all the styles related to the operators controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+// Place all the styles related to the user controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+
+.operator_wrap {
+  margin: 0 auto;
+  width: 1000px;
+  height: 800px;
+  p {
+    float: right;
+    margin-top: 10px;
+    a {
+      color: #000000;
+      font-weight: bold;
+    }
+  }
+
+  .operator_logo {
+    width: 185px;
+    height: 120px;
+    display: block;
+    margin: auto auto;
+    position: relative;
+    background: url(22222.jpg) no-repeat;
+  }
+
+  .operator_bar_nav {
+    width: 100%;
+    text-align: center;
+
+    .operator_bar_list {
+      height: 40px;
+      line-height: 40px
+    }
+  }
+
+  .operator_bar_list {
+    a {
+      display: inline;
+      margin-right: 35px;
+      margin-left: 35px;
+      font-family: 'Do Hyeon', sans-serif;
+      color: #000000;
+      font-size: medium;
+    }
+
+  }
+
+  .menu_bar{
+    position: absolute;
+    left:53%;
+    display: none;
+    width:100px;
+    height:auto;
+    transform-origin: top;
+    transition:5s;
+    background:white;
+    border:1px solid;
+    border-color: dimgrey;
+    text-align:center;
+    .test{
+      display:block;
+      a{
+        padding-top:10px;
+        padding-bottom:10px;
+        font-weight: bold;
+        display:block;
+      }
+      a:hover{
+        background:#EFEFEF;
+      }
+    }
+
+  }
+
+
+
+  .create_menu_section {
+    margin-top: 30px;
+    width: 1000px;
+    height: 700px;
+    text-align: center;
+
+
+  }
+  .edit_menu_section{
+    margin-top: 30px;
+    width: 1000px;
+    height: 700px;
+    text-align: center;
+  }
+
+  .dlete_menu_section{
+    margin-top: 30px;
+    width: 1000px;
+    height: 700px;
+    text-align: center;
+  }
+
+}
+
+//////////////////////
+
+
+
+.register_wrap {
+  margin: 40px auto 0;
+  width: 1000px;
+  height: 800px;
+
+  .register_logo {
+    width: 185px;
+    height: 120px;
+    display: block;
+    margin: auto auto;
+    position: relative;
+    background: url(22222.jpg) no-repeat;
+  }
+  .register_display {
+    margin: 20px auto 0;
+    width: 250px;
+    height: 230px;
+    text-align: center;
+    font-size: small;
+
+    table{
+      td{
+        padding-left:25px;
+        padding-bottom:20px;
+      }
+
+    }
+  }
+}
+
+.operator_wrap {
+  margin: 0 auto;
+  width: 1000px;
+  height: 200px;
+  p{
+    float:right;
+    margin-top:10px;
+    a{
+      color : #000000;
+      font-weight: bold;
+    }
+  }
+
+  .operator_logo {
+    width: 185px;
+    height: 120px;
+    display: block;
+    margin: auto auto;
+    position: relative;
+    background: url(22222.jpg) no-repeat;
+  }
+
+  .operator_bar_nav
+  {
+    width:100%;
+    text-align :center;
+
+    .operator_bar_list
+    {
+      height:40px;
+      line-height:40px
+    }
+  }
+
+  .operator_bar_list
+  {
+    a
+    {
+      display : inline;
+      margin-right:35px;
+      margin-left:35px;
+      font-family: 'Do Hyeon', sans-serif;
+      color : #000000;
+      font-size:medium;
+
+
+    }
+  }
+}
+
+
+#operators_create_menu{
+  .create_menu_section {
+    margin-top: 30px;
+    width: 1000px;
+    height: 700px;
+    text-align: center;
+    h1{
+      text-align:center;
+      font-size: larger;
+      color:#B00100;
+    }
+    .add_box{
+      margin:auto auto;
+      margin-top:20px;
+      width:310px;
+      .add_menu_click {
+      }
+    }
+    .add_menu_click {
+      margin:auto auto;
+      width: 100px;
+      height: 130px;
+      outline: none;
+      cursor: pointer;
+      font-family: 'Do Hyeon', sans-serif;
+      .plus_icon {
+        width: 100px;
+        height: 100px;
+      }
+
+    }
+
+    .add_menu_detail {
+      display: none;
+      height: 120px;
+      text-align: left;
+      table {
+        td {
+          padding-top: 10px;
+          padding-left :15px;
+        }
+
+      }
+    }
+
+  }
+}
+
+
+#operators_edit_menu{
+  .edit_menu_section{
+    margin-top: 30px;
+    width: 1000px;
+    height: 700px;
+    text-align: center;
+    h1{
+      text-align:center;
+      font-size: larger;
+      color:#B00100;
+    }
+  }
+}
+
+#operators_delete_menu{
+  .delete_menu_section{
+    margin-top: 30px;
+    width: 1000px;
+    height: 700px;
+    text-align: center;
+    h1{
+      text-align:center;
+      font-size: larger;
+      color:#B00100;
+    }
+
+    .delete_box{
+      margin:auto auto;
+      margin-top:20px;
+      width:310px;
+      .delete_menu_click {
+      }
+    }
+    .delete_menu_click {
+      margin:auto auto;
+      width: 100px;
+      height: 130px;
+      outline: none;
+      cursor: pointer;
+      font-family: 'Do Hyeon', sans-serif;
+      .delete_icon {
+        width: 100px;
+        height: 100px;
+      }
+
+    }
+  }
+}
+///////////////////////////////////////
+
+.table-status{
+  margin-top: 10px;
+  width : 100%;
+  height : 500px;
+  .table-status-left{
+
+    float: left;
+    width : 20%;
+    height : 500px;
+    background: yellow;
+    text-align: center;
+
+    li {
+      padding-bottom:5px;
+      color: white;
+      font-family: 'Jua', sans-serif;
+      font-size:  30px;
+      margin-top: 20px;
+
+    }
+    li:hover{
+      border-bottom : 2px solid #cfcfcf;
+
+    }
+
+
+  }
+
+  .table-status-left
+  {
+    li
+    {
+      a
+      {
+        padding-bottom:5px;
+        color: white;
+        font-family: 'Jua', sans-serif;
+        font-size:  30px;
+        margin-top: 20px;
+      }
+
+      a:hover
+      {
+        border-bottom : 2px solid #cfcfcf;
+      }
+    }
+
+  }
+
+  .table-status-middle{
+    float: left;
+    width : 80%;
+    height : 500px;
+    background: blue;
+
+
+    .table-num1
+    {
+
+      margin: 20px;
+      width: 20%;
+      height: 200px;
+      background: forestgreen;
+      float: left;
+      a{
+        height: 100%;
+        width: 100%;
+      }
+
+    }
+
+    .table-num2
+    {
+
+      margin: 20px;
+      width: 20%;
+      height: 200px;
+      background: forestgreen;
+      float: left;
+      a{
+        height: 100%;
+        width: 100%;
+      }
+
+    }
+
+    .table-num3
+    {
+
+      margin: 20px;
+      width: 20%;
+      height: 200px;
+      background: forestgreen;
+      float: left;
+      a{
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    .table-num4
+    {
+
+      margin: 20px;
+      width: 20%;
+      height: 200px;
+      background: forestgreen;
+      float: left;
+      a{
+        height: 100%;
+        width: 100%;
+      }
+
+    }
+
+    .table-num5
+    {
+
+      margin: 20px;
+      width: 20%;
+      height: 200px;
+      background: forestgreen;
+      float: left;
+      a{
+        height: 100%;
+        width: 100%;
+      }
+
+    }
+
+    .table-num6
+    {
+
+      margin: 20px;
+      width: 20%;
+      height: 200px;
+      background: forestgreen;
+      float: left;
+      a{
+        height: 100%;
+        width: 100%;
+      }
+
+    }
+    .table-num7
+    {
+      margin: 20px;
+      width: 20%;
+      height: 200px;
+      background: forestgreen;
+      float: left;
+      a{
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    .table-num8
+    {
+      margin: 20px;
+      width: 20%;
+      height: 200px;
+      background: forestgreen;
+      float: left;
+      a{
+        height: 100%;
+        width: 100%;
+      }
+
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+  }
+}
+.add_menu_detail
+{
+  display: none;
+  height: 200px;
+  text-align: left;
+  table
+  {
+    td
+    {
+      padding-top: 10px;
+    }
+  }
+}
+
+
+
+
+
+

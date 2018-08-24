@@ -1,9 +1,9 @@
 <div class="user_wrap">
-  <% if operator_signed_in? %>
-    로그인한 유저:
-    <%= current_operator.user_id %>
+  <% if user_signed_in? %>
+    로그인한 테이블:
+    <%= current_user.id %>
   <% end %>
-  <p><%= link_to '로그아웃', session_path(current_operator.user_id), method: 'delete' %></p>  <!-- 로그아웃되게 해주세요.... -->
+  <p><%= link_to '로그아웃', session_path(current_user.id), method: 'delete' %></p>  <!-- 로그아웃되게 해주세요.... -->
   <a href="/users#index">
     <div class="user_logo"></div>
   </a>
@@ -19,7 +19,7 @@
 </div>
 <section class="order">
   <article class="order-num1">
-    <div class="order-num1-image"></div>
+    <div class="order-num1-image"></div>ㅡ
     <p>1</p>
     <p>2</p>
   </article>

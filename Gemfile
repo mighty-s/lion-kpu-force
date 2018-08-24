@@ -6,6 +6,7 @@ git_source(:github) do |repo_name|
 end
 
 gem 'hashids'
+gem 'carrierwave'
 
 # alternative           / add : khj, date : 2018.8.16
 gem 'pry-rails'

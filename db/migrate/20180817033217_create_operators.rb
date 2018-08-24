@@ -1,7 +1,7 @@
 class CreateOperators < ActiveRecord::Migration[5.1]
   def change
     create_table :operators do |t|
-      t.string :user_id, unique: true
+      t.string :email, unique: true
       t.string :password_digest
       t.string :phone
       t.string :status

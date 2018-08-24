@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180818082518) do
+ActiveRecord::Schema.define(version: 20180823110516) do
 
   create_table "branches", force: :cascade do |t|
     t.string "universe"
@@ -27,11 +27,12 @@ ActiveRecord::Schema.define(version: 20180818082518) do
     t.integer "branch_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "avatar"
     t.index ["branch_id"], name: "index_menus_on_branch_id"
   end
 
   create_table "operators", force: :cascade do |t|
-    t.string "user_id"
+    t.string "email"
     t.string "password_digest"
     t.string "phone"
     t.string "status"

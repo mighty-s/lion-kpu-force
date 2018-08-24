@@ -1,12 +1,77 @@
-+--------------------+<br>
-| 메뉴를 작성해 주세요 |<br>
-+--------------------+<br>
-<%=form_for(Menu.new, url: menu_managements_path, method: "post") do |f|%>
-  <%=f.label :title, '이름' %>
-  <%=f.text_field :name, required: true%> <br>
+<!--+--------------------+<br>-->
+<!--| 메뉴를 작성해 주세요 |<br>-->
+<!--+--------------------+<br>-->
+<%#=form_for(Menu.new, url: menu_managements_path, method: "post") do |f|%>
+  <%#=f.label :title, '이름' %>
+<!--  <%#=f.text_field :name, required: true%> <br>-->
 
-  <%=f.label :contents, '가격'%>
-  <%=f.number_field :price, required: true %> <br>
-  <%=hidden_field_tag 'br_id', params[:br_id] %>
-  <%=f.submit '만들기'%>
+  <%#=f.label :contents, '가격'%>
+<!--  <%#=f.number_field :price, required: true %> <br>-->
+  <%#=hidden_field_tag 'br_id', params[:br_id] %>
+  <%#=f.submit '만들기'%>
+<%#end%>
+
+<!--////////////////////////////////////////////////////-->
+
+<%=form_for(Menu.new, url: menu_managements_path, method: "post") do |f|%>
+  <div class="operator_wrap">
+    <% if operator_signed_in? %>
+      로그인한 유저:
+      <%= current_operator.email %>
+    <% end %>
+    <p><%= link_to '로그아웃', session_path(current_operator.email), method: 'delete' %></p>
+    <div class="operator_logo"></div>
+    <nav class="operator_bar_nav">
+      <ul class="operator_bar_list">
+        <hr>
+        <a href="#">테이블 현황</a>
+        <a href="#">테이블 생성</a>
+        <a class="menu_icon" href="#">메뉴</a>
+        <a href="#">사용법</a>
+        <hr>
+      </ul>
+      <ul class="menu_bar">
+        <div class="test">
+          <%= link_to '메뉴 생성', '/menu_managements/new/'+params[:br_id] %>
+          <a href="#">메뉴 수정</a>
+          <a href="#">메뉴 삭제</a>
+        </div>
+      </ul>
+
+    </nav>
+
+    <section class="create_menu_section"><!-- 상단바 밑 전체 화면 -->
+      <h1>메뉴 생성</h1>
+
+      <div class="add_box">
+
+        <div class="add_menu_click">
+          <%= image_tag "Add-icon.png", class: "plus_icon" %>
+          메뉴 추가
+        </div><!-- add_menu_click end -->
+
+        <div class="add_menu_detail">
+          <table>
+            <tr>
+              <input type="file"><br>
+            <tr>
+              <%=f.label :title, '메뉴명' %>
+              <%=f.text_field :name, required: true%> <br>
+            </tr>
+            <tr>
+              <td>
+                <%=f.label :contents ,'가격'%>
+                  <%=f.number_field :price, required: true %> <br>
+                <%=hidden_field_tag 'br_id', params[:br_id] %>
+                <%=f.submit '생성'%>
+              </td>
+            </tr>
+
+          </table>
+        </div><!-- add_menu_detail end -->
+      </div>
+
+    </section><!-- create section end -->
+  </div>
 <%end%>
+
